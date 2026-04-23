@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cooperativa Santa Transportes</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <div class="container navbar">
+        <a href="#inicio" class="brand">
+          <div class="brand-logo">🚌</div>
+          <div>
+            <h1>COOPERATIVA <span>SANTA TRANSPORTES</span></h1>
+            <p>Pasión por servir</p>
+          </div>
+        </a>
+
+        <nav class="nav-links">
+          <a href="#inicio" class="active">Inicio</a>
+          <a href="#rutas">Rutas</a>
+          <a href="#horarios">Horarios</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#noticias">Noticias</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="#contacto" class="btn btn-outline">👤 Mi cuenta</a>
+          <button class="menu-toggle" id="menuToggle">☰</button>
+        </div>
+      </div>
+
+      <div class="container nav-mobile" id="navMobile">
+        <div class="nav-mobile-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#rutas">Rutas</a>
+          <a href="#horarios">Horarios</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#noticias">Noticias</a>
+          <a href="#contacto">Contacto</a>
+          <a href="#contacto" class="btn btn-outline">Mi cuenta</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-media" id="heroMedia">
+          <div class="container hero-grid">
+            <div class="hero-copy">
+              <div class="eyebrow">TRANSPORTE QUE NOS UNE</div>
+              <h2>Seguridad, comodidad y confianza en cada viaje</h2>
+              <p>
+                Conectamos destinos, acercamos personas. Viaja seguro, viaja con
+                nosotros.
+              </p>
+              <div class="hero-actions">
+                <a href="#rutas" class="btn btn-primary">Ver rutas →</a>
+                <a href="#horarios" class="btn btn-outline"
+                  >Consultar horarios ⏱</a
+                >
+              </div>
+            </div>
+
+            <div class="hero-side">
+              <div class="bus-switcher">
+                <div class="bus-switcher-top">
+                  <h3>Cambiar bus</h3>
+                  <div class="bus-switcher-controls">
+                    <button type="button" id="prevBus">‹</button>
+                    <button type="button" id="nextBus">›</button>
+                  </div>
+                </div>
+                <div class="thumbs" id="busThumbs"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container search-panel" id="horarios">
+          <div class="search-card">
+            <h3>📍 Busca tu ruta</h3>
+            <div class="search-grid">
+              <div class="field">
+                <label>Origen</label>
+                <input
+                  type="text"
+                  id="origenInput"
+                  placeholder="Ciudad o parroquia de origen"
+                />
+              </div>
+              <div class="field">
+                <label>Destino</label>
+                <input
+                  type="text"
+                  id="destinoInput"
+                  placeholder="Ciudad o parroquia de destino"
+                />
+              </div>
+              <div class="field">
+                <label>Fecha</label>
+                <input type="date" />
+              </div>
+              <div class="field">
+                <label>Pasajeros</label>
+                <select>
+                  <option>1 pasajero</option>
+                  <option>2 pasajeros</option>
+                  <option>3 pasajeros</option>
+                  <option>4 pasajeros</option>
+                </select>
+              </div>
+              <button class="btn btn-primary search-btn" id="searchBtn">
+                Buscar rutas 🔎
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="routes" id="rutas">
+        <div class="container">
+          <div class="routes-head">
+            <div>
+              <h2 class="section-title">Rutas destacadas</h2>
+            </div>
+            <a href="#contacto">Ver todas las rutas →</a>
+          </div>
+          <div class="routes-grid" id="routesGrid"></div>
+        </div>
+      </section>
+
+      <section class="services" id="servicios">
+        <div class="container">
+          <h2 class="section-title">Nuestros servicios</h2>
+          <div class="services-grid">
+            <article class="service-card">
+              <div class="service-icon">💺</div>
+              <h3>Comodidad</h3>
+              <p>Unidades modernas y confortables.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-icon">🛡️</div>
+              <h3>Seguridad</h3>
+              <p>Viajes seguros con personal capacitado.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-icon">📶</div>
+              <h3>Conexión Wi‑Fi</h3>
+              <p>Internet a bordo en nuestras unidades.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-icon">🔌</div>
+              <h3>Cargadores USB</h3>
+              <p>Mantén tus dispositivos cargados.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-icon">❄️</div>
+              <h3>Aire acondicionado</h3>
+              <p>Viaja cómodo en cualquier clima.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-icon">🎧</div>
+              <h3>Atención 24/7</h3>
+              <p>Estamos para ayudarte siempre.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats">
+        <div class="container">
+          <div class="stats-box">
+            <div class="stats-grid">
+              <div class="stat-item">
+                <div class="stat-icon">🧭</div>
+                <div>
+                  <strong>32</strong>
+                  <span>Rutas activas</span>
+                </div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon">🚌</div>
+                <div>
+                  <strong>45+</strong>
+                  <span>Unidades modernas</span>
+                </div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon">👤</div>
+                <div>
+                  <strong>25K+</strong>
+                  <span>Pasajeros al día</span>
+                </div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon">✅</div>
+                <div>
+                  <strong>10+</strong>
+                  <span>Años de experiencia</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-strip" id="contacto">
+        <div class="contact-strip-box">
+          <div class="container contact-strip-inner">
+            <div>
+              <h3>¿Tienes dudas o sugerencias?</h3>
+              <p>
+                Estamos aquí para ayudarte a tener la mejor experiencia de
+                viaje.
+              </p>
+            </div>
+            <a href="mailto:info@santatransportes.ec" class="btn btn-primary"
+              >Contáctanos ✈</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <div class="brand">
+            <div class="brand-logo">🚌</div>
+            <div>
+              <h1>COOPERATIVA <span>SANTA TRANSPORTES</span></h1>
+              <p>Pasión por servir</p>
+            </div>
+          </div>
+          <div class="socials">
+            <a href="#">f</a>
+            <a href="#">ig</a>
+            <a href="#">t</a>
+            <a href="#">yt</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Enlaces rápidos</h4>
+          <a href="#inicio">Inicio</a>
+          <a href="#rutas">Rutas</a>
+          <a href="#horarios">Horarios</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#noticias">Noticias</a>
+        </div>
+
+        <div class="footer-col" id="noticias">
+          <h4>Información</h4>
+          <a href="#">Quiénes somos</a>
+          <a href="#">Políticas</a>
+          <a href="#">Términos y condiciones</a>
+          <a href="#">Trabaja con nosotros</a>
+          <a href="#">Preguntas frecuentes</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <p>📞 (04) 123 4567</p>
+          <p>✉ info@santatransportes.ec</p>
+          <p>📍 Terminal Santa Elena,<br />Santa Elena - Ecuador</p>
+        </div>
+      </div>
+
+      <div class="container copyright">
+        © 2024 Cooperativa Santa Transportes. Todos los derechos reservados.
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
